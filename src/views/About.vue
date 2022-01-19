@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>om vaksinekalkulatoren</h1>
+    <p>Vaksinekalkulatoren er laga av Ole Petter Baugerød Stokke.</p>
   </div>
 </template>

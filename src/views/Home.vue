@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>vaksinekalkulatoren 💉</h1>
+
+    <p>Når tok du siste vaksinedose?</p>
+    <input type="date" v-model="selected_date" />
+
+    <div v-if="selected_date != 0">
+      <p>Fulle uker siden du tok siste vaksinedose:</p>
+      <p>{{ weeks }}</p>
+    </div>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+  export default {
+    name: "Home",
 
-export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
-};
+    data () {
+      return {
+        selected_date: 0
+      }
+    },
+
+    computed: {
+      weeks () {
+        const ms_since = new Date () - new Date(this.selected_date) // millisekunder siden sist dose
+        const weeks_since = ms_since / 604800000 // millisekunder per uke
+        return Math.floor(weeks_since) // runder nedover for fulle uker
+      }
+    }
+  };
 </script>
