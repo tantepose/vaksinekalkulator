@@ -1,13 +1,14 @@
 <template>
   <div class="home">
-    <h1>vaksinekalkulatoren 💉</h1>
+    <h1>💉 vaksine-kalkulatoren</h1>
 
-    <p>Når tok du siste vaksinedose?</p>
+    <p>Når tok du siste vaksinedose? <br/> </p>
+      <p><i>(trykk på boksen under for å velge dato)</i></p>
     <input type="date" v-model="selected_date" />
 
     <div v-if="selected_date != 0">
-      <p>Fulle uker siden du tok siste vaksinedose:</p>
-      <p>{{ weeks }}</p>
+      <p>Fulle uker siden du tok siste vaksinedose: <br/>
+      <span class="big">{{ weeks }}</span></p>
     </div>
 
   </div>
