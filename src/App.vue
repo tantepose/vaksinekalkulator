@@ -15,7 +15,7 @@ body {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .big {
@@ -26,16 +26,16 @@ p {
 h1 {
   font-size: 2em;
   color: rgb(247, 208, 243);
+  margin: 10px;
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 }
 
 a, a:visited {
   color: rgb(247, 208, 243);
 }
-
 
 #nav a.router-link-exact-active {
   color: white
