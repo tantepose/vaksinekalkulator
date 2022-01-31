@@ -19,7 +19,7 @@ p {
 }
 
 .big {
-  font-size: 10em;
+  font-size: 8em;
   color: rgb(247, 208, 243);
 }
 
